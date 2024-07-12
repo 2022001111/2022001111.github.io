@@ -1,0 +1,28 @@
+		<style type="text/css">
+			@font-face {
+				font-family:'MinecraftTen-VGORe';
+				src: url(MinecraftTen-VGORe.ttf);
+			}
+			.MinecraftTen-VGORe{
+				font-family: 'MinecraftTen-VGORe';
+				font-size: 50px;
+				text-shadow: none;
+			}
+			@font-face {
+				font-family:'Minecraft字体';
+				src: url(Minecraft字体.ttf);
+			}
+			.Minecraft字体{
+				font-family: 'Minecraft字体';
+				font-size: 50px;
+				text-shadow: none;
+			}
+		</style>
+
+  table {
+padding: 0;
+}
+
+html {
+  background-color: #E8E8ED;
+}  
