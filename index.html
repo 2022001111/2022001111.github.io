@@ -392,8 +392,30 @@ target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-s
 
  <script src="main.js"></script>
  
+ 
+  <!-- 音频文件预加载 -->
+    <audio id="sound1" src="eat.mp3" preload="auto"></audio>
+    <audio id="sound2" src="Q.mp3" preload="auto"></audio>
+    <audio id="sound3" src="aqtw.mp3" preload="auto"></audio>
+
+    <!-- 按钮，点击后播放不同的音频 -->
+    <button id="button1" onclick="playSound('sound1')">Don't click</button>
+    <button id="button2" onclick="playSound('sound2')">Don't click</button>
+    <button id="button3" onclick="playSound('sound3')">Don't click</button>
+
+    <script>
+        // JavaScript函数，用于播放音频
+        function playSound(soundId) {
+            var audio = document.getElementById(soundId);
+            if (audio) {
+                audio.play();
+            }
+        }
+    </script>
+
 <style>    .gray-italic-text {        color: gray; /* 设置文本颜色为灰色 */        font-style: italic; /* 设置文本为斜体 */    }</style>
-<p class="gray-italic-text"> <br> <br> <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br> <br>更新日期：24/07/13<br>特别鸣谢：WSD_KW<br>AR • 掉渣田-2023/11/14创立
+
+<p class="gray-italic-text"> <br> <br> <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br> <br>更新日期：24/07/12<br>特别鸣谢：WSD_KW<br>AR • 掉渣田-2023/11/14创立
 </p>
 
 </body>
