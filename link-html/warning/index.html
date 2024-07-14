@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>内联样式示例</title>
+    <style>
+        body {
+            background-color: #ED001B; /* 设置整个页面的背景颜色为红色 */
+        }
+        
+        p {    margin: 0; /* 移除段落的上和下外边距 */    padding: 0; /* 移除段落的上和下内边距 */    line-height: 1.8; /* 进一步调整行高 */}
+        
+        img {    margin-bottom: 30px; /* 增加图像底部的外边距 */}
+        
+         .round-button {    padding: 25px 45px;    background-color: white;    color: red;    border: 2px solid red;    border-radius: 20px; /* 设置圆角 */    cursor: pointer;    font-size: 35px;    text-align: center;    display: inline-block;    text-decoration: none;  }
+         
+         .expandable-content {
+    display: none; /* 默认隐藏段落 */
+    margin-left: 20px; /* 为图标留出空间 */
+  }
+  .expand-icon {
+    margin-right: 5px; /* 图标与文本之间的间距 */
+    vertical-align: middle; /* 垂直居中对齐图标 */
+  }
+  
+  a {
+    text-decoration: none; /* 去掉链接下划线 */
+    color: white; /* 设置链接文字颜色 */
+  }
+         
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td><img src="warning.png" alt="示例图片" width="200" height="200"></td>
+        <td><p style="color:white;font-size:50px">此网站已被人举报不安全</p><p style="color:#D4D4D4;font-size:36px">托管方armt.072211.xyz</p></td>
+    </tr>
+</table>
+
+<p style="color:white;font-size:36px"> 
+我们建议你不要继续访问此站点。已报告此问题，以阻止可能试图窃取个人或财务信息的钓鱼威胁。</p>
+
+<p> <br> <br> </p>
+<a href="#" class="round-button" onclick="goBack()">返回</a>
+
+<script>
+function goBack() {
+  window.history.back(); // 返回上一个页面
+}
+</script>
+
+<p><br> <br> </p>
+<p style="color:white;font-size:36px"><a href="#" onclick="toggleContent()">详细信息</a><span class="expand-icon"></span> </p>
+<div id="details" class="expandable-content">
+  <p style="color:white;font-size:36px">钓鱼网站可以模拟受信任的网站，诱导你泄露个人或财务信息。即使你尝试访问的网站看起来很可信，它也有可能是伪装的钓鱼网站。若继续访问此网站，你可能会将密码、信用卡号码、联系信息或软件激活密钥等敏感信息置于风险之中。<a href="https://learn.microsoft.com/zh-cn/deployedge/microsoft-edge-security-smartscreen"><u>了解详细信息</u></a><br> <br>这些攻击通常会采用垃圾邮件、广告或其他网站的重定向等方式诱导你泄露敏感信息。如有疑问，请<a href="#" onclick="goBack()"><u>返回</u></a>。</p>
+</div>
+
+<script>
+function toggleContent() {
+  var details = document.getElementById('details');
+  if (details.style.display === 'none' || details.style.display === '') {
+    details.style.display = 'block';
+  } else {
+    details.style.display = 'none';
+  }
+}
+</script>
+
+
+
+</body>
+</html>
