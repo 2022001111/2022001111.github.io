@@ -1,0 +1,446 @@
+﻿</html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="typeface.css">
+    <header>
+    <meta charset="UTF-8">
+    <meta name="apeng" content="AR 掉渣田官网&#8226;AR Team">
+    <link rel="icon" href="dztlogo.png">
+    <title>AR 掉渣田&#8226;官网（AR Team）</title></header>
+</head>
+
+<body>
+	<table>
+   <tr>
+     <td><a href="https://armt.072211.xyz" target="_blank"><img src="dztlogo.png" width="60" height="60"></a>
+</td>
+<td>
+				<div class="MinecraftTen-VGORe" style="font-size:50px;">&nbsp AR掉渣田&#8226;官网</div>	
+</td>
+
+</tr>
+</table>
+
+<HR align=center width=1500 color=green SIZE=3 >
+
+
+<!-- old
+    <td><h1>掉渣田测试官网</h1></td>
+                                        -->
+       
+           
+<!-- 轮播图片 -->
+
+   <head>
+    <style>
+        /* 设置整体大框架 */
+        .overall{
+            /* 设置窗口大小 */
+            width: 800px;
+            height: 400px;
+    
+            /* 将弹性 <div> 元素的所有项目的居中对齐 */
+            align-items: center;
+    
+            /* 设置图片外边距 左右居中 上方5% */
+            margin: 5% auto;        
+        }
+    
+        .content{
+            /* 设置相对定位 */
+            position: relative;
+            height: 400px;
+        }
+    
+        .content ul{
+            /* 去除标签<ul><li></li></ul>默认加的样式 */
+            list-style-type: none;
+        }
+    
+        .content ul>li{
+            width: 600px;
+            height: 300px;
+    
+            /* 设置绝对定位 */
+            position: absolute;
+    
+            /* 设置过度效果 时间为1s */
+            transition: 1s;
+    
+            /* 设置最大透明度 默认一开始图片为透明的 当下面js加载的时候
+                第一张图片设置为不透明
+            */
+            opacity: 0;
+        }
+        
+        /* 设置每个图片的样式 */
+        .content ul>li img{    
+            /* 设置每一张图片的大小 */
+            width: 900px;
+            height:400px;
+    
+            /* 设置圆角边框 */
+            border-radius: 5%;
+         
+            /* 设置边框样式 */
+            border: 5px solid #0e0600;        
+        }
+    
+        /* 设置轮播图下面的小点 */
+        .content ol{
+            /* 设置相对定位 */
+            position: relative;
+    
+            /* 设置网格布局 */
+            display: grid;
+            
+            /* 设置网格布局中的列数及宽度 */
+            grid-template-columns: repeat(3, 75px);
+    
+            /* 设置网格布局中的行数及宽度 */
+            grid-template-rows: auto;
+    
+            /* 设置网格行与列之间的间隙 */
+            /* 间隙为1em */
+            grid-gap: 1em;
+            gap:1em;
+    
+            /* 右浮动 */
+            float: right;
+    
+            /* 设置浮点的向上的内边距 */
+            margin-top: 450px;
+    
+            /* 去除列表样式 */
+            list-style: none;
+    
+            /* 把图像的上边缘设置在其包含元素上边缘之下0px高的位置 */
+            top: 0;
+    
+            /* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
+            left: 0;
+        }
+    
+        .content ol li{
+            /* 设置每个小点的大小 */
+            width: 25px;
+            height: 10px;
+    
+            /* 设置里面的文字的大小 */
+            font-size: 15px;
+    
+            /* line-height 属性设置行间的距离（行高） */
+            line-height: 20px;
+    
+            /* 浮动左对齐 */
+            float: left;
+    
+            /* 设置文本居中 */
+            text-align: center;
+    
+            /* 把表格做成圆点 */
+            border-radius: 2em;
+    
+            /* 设置圆点的边框 */
+            border: 5px solid #af9d9d;
+        }
+    </style>
+    </head>
+
+<body>
+    <!-- 整体框架 -->
+    <div class="overall">
+        <!-- 内容  -->
+        <div class="content">
+            <!-- 轮播图片 -->
+            <ul>
+                <li><img src="images/Slim.jpg" alt=""></li>
+                <li><img src="images/Screenshot 2.jpg" alt=""></li>
+                <li><img src="images/ARMT logo.png" alt=""></li>
+            </ul>
+            <!-- 轮播图的点 -->
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>        
+    </div>
+</body>
+
+<script>
+    // 当页面载入的时候加载这个函数
+    window.onload = function()
+    {
+
+    // 获取大盒子的内容 为content的第一个元素 也就是ul中的内容
+    var content = this.document.getElementsByClassName("content")[0];
+
+    // 获取ul中的li
+    var li = content.getElementsByTagName("li");
+
+    // 函数传入两个参数，(i,j)
+    function fun(i, j)
+    {//转换图片函数，就是把透明度改了一下        
+        li[i].style.opacity=1;
+        li[j].style.opacity=0;
+
+        // 然后也把小图标的颜色改一下
+        // 把图标改成白色
+        // 如果图片数量发生改变 那么下面的3也要变成图片的数量
+        li[i + 3].style.backgroundColor = "#ffffff";
+
+        // 把图标改成透明
+        li[j + 3].style.backgroundColor = "#00000000";
+    }
+
+    // 默认情况下轮播图为第一张
+    fun(0, 1);//初始化下
+    var i = 0;
+    function auto()
+    {//轮播循环函数
+        i ++;
+        // 当数组越界的时候
+        if(i >= 3)
+        {
+        // 置为0
+            i = 0;
+            // 然后递归重新开始
+            // 这里的2位3-1的意思
+            fun(0, 2);
+        }
+        else
+        {
+            // 反之递归
+            fun(i, i - 1);
+        } 
+    }
+    // 设置变化的时间
+    timer = this.setInterval(auto, 2000);
+
+    // 设置鼠标在轮播图上的时候 轮播图就停止播放
+    content.onmouseover = function () 
+    { 
+        //鼠标划上去，停止轮播
+        clearInterval(timer);
+    }
+
+    // 设置鼠标在轮播图上的时候 轮播图就继续播放
+    content.onmouseout = function () 
+    { 
+        //鼠标划出，继续轮播
+        timer = setInterval(auto, 2000); //调用定时器
+    }
+    var j = 0;
+    for(; j < 3; j++)
+    {
+        //点击小图标也可以转换图片
+        li[j + 3].index = j;
+        // 当点击小图标进行的函数
+        li[j + 3].onclick = function()
+        {
+            fun(this.index, i)
+            i = this.index;
+        }
+    }
+}
+</script>
+
+<!-- 		
+  字体
+  <div class="MinecraftTen-VGORe"></div>	
+		<div class="Minecraft字体"></div>
+
+                                      -->
+
+		
+		<style type="text/css">
+	 	@font-face {
+				font-family:'MinecraftTen-VGORe';
+				src: url(MinecraftTen-VGORe.ttf);
+			}
+			.Minecraft字体{
+				font-family: 'MinecraftTen-VGORe';
+				font-size: 50px;
+				text-shadow: none;
+			}
+	 	@font-face {
+				font-family:'Minecraft字体';
+				src: url(Minecraft字体.ttf);
+			}
+			.MinecraftTen-VGORe{
+				font-family: 'Minecraft字体';
+				font-size: 50px;
+				text-shadow: none;
+			}
+		</style>
+
+
+<p> <br> <br> <br> </p>
+<!-- 间隔 -->
+
+    <center>
+        <p style="font-size:55px;color:#DC9613;font-family:Minecraft字体">「今日封神榜」</p>
+    </center>
+
+<HR align=center width=1300 color=#DC9613 SIZE=4 >
+
+<p style="font-size:30"> 小慕小木&nbsp&nbsp&#120039;&#120050;&#120042;&#120056;&#120047;&#120046;&#120050;&nbsp&nbsp拟态势 </p>
+
+<HR align=center width=1300 color=#DC9613 SIZE=4 >
+
+<p style="font-size:50px;color: rgb(49,50,52)">-公告-</p>
+<p style="font-size:30px;font-family:Minecraft字体">&#8226; AR掉渣田官网正式开放！</p>
+
+<!-- 
+<p class="gray-italic-text">暂无公告</p> 
+-->
+
+<p style="font-size:50px;color: rgb(49,50,52)">-相关链接-</p>
+
+
+
+<table>
+  <tr>
+    <td><img src="images/bililogo.png" alt=" " width="30" height="30"></td>
+    <td><p style="font-family:Minecraft字体;font-size:30px">哔哩哔哩主页</p></td>
+    
+    <td>
+<a href="https://space.bilibili.com/1441611827" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40" width="40"></a>
+
+</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="images/mgggw.jpg" alt=" " width="30" height="30"></td>
+    <td><p style="font-family:Minecraft字体;font-size:30px">妙狗狗国王个人网站</p></td>
+    
+    <td>
+<a href="https://xiaoluo.link" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40" width="40"></a>
+
+</td>
+  </tr>
+</table>
+
+
+<p style="font-size:50px;color: rgb(49,50,52)">-加入团队-</p>
+
+<table>
+				<tr>
+							 <td><img src="images/traffic-logo.png" alt=" " width="30" height="30"></td>
+							 <td><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=iMysqIWAS0dKMNrQq_UnftSl9QPNQ_Gx&authKey=B2uRTZ2MrCpgS7nMXwjcq5LmaMqMx4EJTyzVnTSJiG3AfOqIo2kGKWte6ngMAkwR&noverify=0&group_code=966234858" 
+target="_blank" title=" " style="font-family:Minecraft字体;color:orange;;font-size:25px;">加入Minecraft Traffic 建设团队 【Q群966234858】<br></a></td>
+    </tr>
+</table>
+
+<table>
+				<tr>
+							 <td><img src="images/armt-logo.png" alt=" " width="30" height="30"></td>
+								<td><a href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0IRoQaVIMk1gHNV0Wl4I1mKPVKwuQ72O&authKey=UM513U%2F0cOpG%2F7riLcUuxKmqBl1r7%2BBrcNT5HS4fVR5JpYNRE3BSqbc0hXFWyCJz&noverify=0&group_code=935292850" 
+target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-size:25px;">加入MC AR麦铁铁路建设团队 【Q群935292850】</a></td>
+    </tr>
+</table>
+
+<p style="font-size:30px;color:#3D3D3D">［相关群聊］</p>
+
+<p style="font-family:MinecraftTen-VGORe;color:#61A861;font-size:25px;">加入掉渣田聊天群：<br>375308994<br>165173946<br>722377116<br>336740416<br>808453476<br>963216063</p>
+
+<table>
+				<tr>
+								<td><p style="font-size:30px;color:#3D3D3D">［群规查阅］</p></td>
+							 <td><td><a href="https://docs.qq.com/doc/DWU5rV3FIWWRnWm9N"><img src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
+				 </tr>
+</table>
+
+<p style="font-size:50px;color: rgb(49,50,52)">-官方内容下载-</p>
+
+<table>
+				<tr>
+       <td><p style="color:219C53;font-size:40">点击按钮下载官方APP</p></td>
+       <td><a href="https://www.123pan.com/s/Agx4jv-yDZzv.html"><img src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
+    </tr>
+</table>
+
+<table>
+				<tr>
+       <td><p style="color:219C53;font-size:40">点击按钮下载键位海报</p></td>
+       <td><a href="https://gitdl.cn/https://raw.githubusercontent.com/2022001111/22001picture/main/1719738754975.png"><img src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
+    </tr>
+</table>
+
+<table>
+				<tr>
+       <td><p style="color:219C53;font-size:40">点击按钮下载仿基岩键位</p></td>
+       <td><a href="https://www.123pan.com/s/Agx4jv-qDZzv.html"><img src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
+    </tr>
+</table>
+
+<p style="font-size:50px;color: rgb(49,50,52)">-宣传视频-</p>
+
+<!-- <img src="" alt="">
+<video width="1280" height="720" controls>
+  <source src="mbeFabu.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  您的浏览器不支持 HTML5 video 标签。
+</video>
+<pstyle="font-family:arial;color:grey;font-size:8px;">[video]</p> -->
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1Vm42157H7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="1280" height="720"> </iframe>
+
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1wy411i7bz&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="1280" height="720"> </iframe>
+
+<p> <br> <br> </p>
+
+<HR align=center width=1500 color=green SIZE=3 >
+
+<table>
+  <tr>
+  			<td>
+<a href="https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4" target="_blank">
+	<img src="images/learn-more.png" width="70" height="70" alt="了解更多">
+</a></td>
+</tr>
+</table>
+
+ <script src="main.js"></script>
+ 
+ 
+  <!-- 音频文件预加载 -->
+    <audio id="sound1" src="Audios/eat.mp3" preload="auto"></audio>
+    <audio id="sound2" src="Audios/Q.mp3" preload="auto"></audio>
+    <audio id="sound3" src="Audios/aqtw.mp3" preload="auto"></audio>
+
+    <!-- 按钮，点击后播放不同的音频 -->
+    <button id="button1" onclick="playSound('sound1')">Don't click</button>
+    <button id="button2" onclick="playSound('sound2')">Don't click</button>
+    <button id="button3" onclick="playSound('sound3')">Don't click</button>
+
+    <script>
+        // JavaScript函数，用于播放音频
+        function playSound(soundId) {
+            var audio = document.createElement('audio');
+            audio.src = document.getElementById(soundId).src;
+            audio.play();
+        }
+    </script>
+    
+<a href="link-html/warning/index.html"><p style="color:red;fint-size:30px"><i>[&#9888;&#65039;]</p></a>
+
+<p><i>测试网页窗口</i></p>
+    <iframe src="https://xiaoluo.link" width="1280" height="720" title="Example Iframe">
+        <p>您的浏览器不支持 iframe，但您可以通过以下链接访问目标网页：<a href="https://www.example.com">访问示例网站</a></p>
+    </iframe>
+    
+    
+<style>    .gray-italic-text {        color: gray; /* 设置文本颜色为灰色 */        font-style: italic; /* 设置文本为斜体 */    }</style>
+
+<p class="gray-italic-text"> <br> <br> <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br> <br>更新日期：24/07/12<br>特别鸣谢：WSD_KW<br><br>Falling slag Field<br>AR &#8226; 掉渣田-2023/11/14创立
+</p>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
+<iframe src="https://player.bilibili.com/player.html?bvid=BV1QE421c7a4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="200" height="200"> </iframe>
+
+</body>
+</html>
