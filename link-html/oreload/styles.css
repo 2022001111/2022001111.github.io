@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); /* 导入自定义字体 */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #f0f0f0;
+    font-family: 'Roboto', sans-serif; /* 使用自定义字体 */
+}
+
+.progress-bar {
+    width: 50%;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    position: relative;
+    padding: 2px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: #fff;
+    animation: progress 4s linear;
+}
+
+.progress-done {
+    width: 100%;
+}
+
+.percentage {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    10% { width: 10%; }
+    
+    35% { width: 30%; } /* 卡顿点 */
+    50% { width: 50%; }
+    55% { width: 50%; } /* 卡顿点 */
+    70% { width: 50%; }
+    75% { width: 50%; } /* 卡顿点 */
+    90% { width: 90%; }
+    95% { width: 90%; } /* 卡顿点 */
+    100% { width: 100%; }
+}
+
+
+body {
+            background-color: #1E1E1E; /* 背景颜色，浅灰色的十六进制代码 */
+        }
+       
+       
+.percentage {
+    margin-top: 10px;
+    font-size: 1.0em;
+    font-family:Minecraft字体;
+    color: white; /* 将字体颜色设置为白色 */
+}
+
+
+@font-face {
+    font-family: 'Minecraft字体';
+    src: url('../../Minecraft字体.ttf') format('woff2'),
+         url('../../Minecraft字体.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.tab-button {
+    font-family: 'Minecraft字体', sans-serif;
+    /* 其他样式 */
+}
