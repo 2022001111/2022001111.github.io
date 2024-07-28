@@ -1,0 +1,77 @@
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab-button {
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.tab {
+    display: none;
+}
+
+.tab.active {
+    display: block;
+}
+
+.tab-button {
+    background-image: url("[data-image-normal属性的值]");
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+@font-face {
+    font-family: 'Minecraft字体';
+    src: url('../../Minecraft字体.ttf') format('woff2'),
+         url('../../Minecraft字体.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.tab-button {
+    font-family: 'Minecraft字体', sans-serif;
+    /* 其他样式 */
+}
+
+
+
+.tab-button {
+    color: #343434; /* 初始字体颜色 */
+    /* 其他样式 */
+}
+
+
+
+.tab-button {
+    width: 100px; /* 新的按钮宽度 */
+    height: 100px; /* 新的按钮高度 */
+    background-image: url('path-to-your-image.jpg'); /* 按钮的背景图像 */
+    background-size: 100% 100%; /* 背景图像拉伸以完全覆盖按钮 */
+    background-repeat: no-repeat; /* 防止背景图像重复 */
+    background-position: center; /* 背景图像居中对齐 */
+}
+
+body {
+            background-color: #444548; /* 背景颜色，浅灰色的十六进制代码 */
+        }
+
+
+
+a {
+    text-decoration: none;
+}
+/*移除链接下划线*/
