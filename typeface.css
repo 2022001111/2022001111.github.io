@@ -1,4 +1,4 @@
-﻿		<style type="text/css">
+		<style type="text/css">
 			@font-face {
 				font-family:'MinecraftTen-VGORe';
 				src: url(MinecraftTen-VGORe.ttf);
@@ -9,11 +9,11 @@
 				text-shadow: none;
 			}
 			@font-face {
-				font-family:'Minecraft瀛椾綋';
-				src: url(Minecraft瀛椾綋.ttf);
+				font-family:'Minecraft字体';
+				src: url(Minecraft字体.ttf);
 			}
-			.Minecraft瀛椾綋{
-				font-family: 'Minecraft瀛椾綋';
+			.Minecraft字体{
+				font-family: 'Minecraft字体';
 				font-size: 50px;
 				text-shadow: none;
 			}
@@ -24,12 +24,10 @@ padding: 0;
 }
 
 html {
-  background-color: #E8E8ED;
+  background-color: #1E1E1E;
 }  
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  
+
+
+p {
+    color: white;
 }
