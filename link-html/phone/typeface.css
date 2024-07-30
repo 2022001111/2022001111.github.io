@@ -1,0 +1,79 @@
+		<style type="text/css">
+			@font-face {
+				font-family:'MinecraftTen-VGORe';
+				src: url(../../MinecraftTen-VGORe.ttf);
+			}
+			.MinecraftTen-VGORe{
+				font-family: 'MinecraftTen-VGORe';
+				font-size: 50px;
+				text-shadow: none;
+			}
+			@font-face {
+				font-family:'Minecraft字体';
+				src: url(../../Minecraft字体.ttf);
+			}
+			.Minecraft字体{
+				font-family: 'Minecraft字体';
+				font-size: 50px;
+				text-shadow: none;
+			}
+		</style>
+
+  table {
+padding: 0;
+}
+
+html {
+  background-color: #313234;
+}  
+
+
+p {
+    color: white;
+}
+
+.text-with-background {
+    background-color: #48494B; /* 设置文本的背景颜色 */
+    padding: 10px; /* 设置文本周围的内边距 */
+}
+
+
+
+
+/* 定义按钮的默认样式 */
+.button-style {
+  /* 设置按钮的大小和边框 */
+  width: 120px;
+  height: 40px;
+  border: 2px solid;
+  border-color: #EFEFEF #707070 #707070 #EFEFEF; /* 上 右 下 左 */
+  border-radius: 0px; /* 可选的圆角效果 */
+
+  /* 设置内部填充颜色 */
+  background-color: #C6C6C6;
+
+  /* 设置文本样式 */
+  color: #000;
+  font-size: 14px;
+  font-weight: #;
+  font-family: Minecraft字体;
+  text-align: center;
+  line-height: 40px; /* 使文本垂直居中 */
+
+  /* 鼠标悬停样式 */
+  transition: background-color 0.0s, border-color 0.0s;
+  cursor: pointer;
+
+  /* 按下按钮的样式 */
+}
+.button-style:active {
+  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
+  background-color: #208305;
+}
+
+/* 鼠标悬停时的样式 */
+.button-style:hover {
+  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
+  background-color: #208305;
+}
+
