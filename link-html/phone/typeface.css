@@ -77,3 +77,18 @@ p {
   background-color: #208305;
 }
 
+
+.image-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: center; /* 或其他值，取决于你的布局 */
+}
+
+.image-container img {
+    width: 271px;
+    height: 100px;
+    /* 如果需要保持图片的长宽比 */
+    object-fit: cover; 
+}
+
