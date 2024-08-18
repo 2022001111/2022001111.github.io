@@ -177,8 +177,9 @@ p {
             color: #FFFFFF;
             float: right;
             font-size: 20px;
+            font-family: Minecraft字体;
             position: absolute;
-            top: 8px;
+            top: 6px;
             right: 10px;
         }
         .close:hover,
@@ -231,3 +232,21 @@ p {
             0% { transform: translateY(-100vh); /* 从屏幕顶部外开始 */ }
             100% { transform: translateY(100vh); /* 下落到屏幕底部 */ opacity: 0; }
         }
+        
+        
+        
+        
+        
+        
+  .image-container {
+    width: 200px; /* 矩形区域的宽度 */
+    height: 300px; /* 矩形区域的高度 */
+    overflow: hidden; /* 隐藏超出容器的部分 */
+    border: 2px solid #000; /* 可选：添加边框 */
+  }
+  
+  .image-container img {
+    width: 100%; /* 图像宽度等于容器宽度 */
+    height: 100%; /* 图像高度等于容器高度 */
+    object-fit: cover; /* 保持图像长宽比，使图像充满容器，超出部分将被裁剪 */
+  }
