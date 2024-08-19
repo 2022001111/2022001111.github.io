@@ -45,7 +45,7 @@
   /* 设置文本样式 */
   color: #000;
   font-size: 14px;
-  font-family: Minecraft字体;
+  font-family: 'Minecraft字体';
   font-weight: #;
   text-align: center;
   line-height: 40px; /* 使文本垂直居中 */
@@ -91,7 +91,7 @@ h2 {
 }
 
 button {
-  font-family: "MC";
+  font-family: "Minecraft字体";
   height: 48px;
   background-color: #d0d1d4;
   color: #000000;
