@@ -39,7 +39,9 @@
 }
 
 
-
+a {
+    text-decoration: none;
+}
 
 </style>
 			<style>
@@ -481,7 +483,7 @@ target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-s
 								<td><a href="mailto:2142258771@qq.com"><button class="button-style" onclick="Getbutton()">私信邮箱获取！</button></a></td>
 								
 								<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-								<td><a href="#"><button class="button-style" >敬请期待</button></a></td>
+								<td><a href="##"><button class="button-style" >敬请期待</button></a></td>
 								<!-- 烂代码别看了（恼 -->
 				</tr>
 </table>
@@ -491,7 +493,22 @@ target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-s
             alert('私信邮箱：2142258771@qq.com\n发送“FSF披风”到邮箱，即可获取！（等待回复）\n【限定20份】');
         }
     </script>
+    </br></br>
     
+    
+    
+    <a href="##" id="toggleLink"><p style="font-size:20px;font-family:Minecraft字体">下载之前，您需要阅读并承诺一段条约&nbsp∨</p></a>
+<p id="content" style="display: none;font-family:Minecraft字体;font-size:20px">您不能将拥有的披风文件以任何方式分享、上传到其他地方或其他人，感谢配合社区制度。</p>
+
+<script>document.getElementById('toggleLink').addEventListener('click', function() {
+    var content = document.getElementById('content');
+    if (content.style.display === 'none') {
+        content.style.display = 'block';
+    } else {
+        content.style.display = 'none';
+    }
+});</script>
+
 <p style="font-size:10px;font-family:Minecraft字体">*如无法获取请联系UP</p>
 
 <a href="https://armt.072211.xyz/link-html/phone/index.html"><p class="text-with-background" style="text-align: center;font-size:12px;">进入手机版</p></a>
