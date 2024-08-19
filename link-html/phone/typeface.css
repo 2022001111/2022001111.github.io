@@ -45,7 +45,7 @@
   /* 设置文本样式 */
   color: #000;
   font-size: 14px;
-  font-family: 'Minecraft字体';
+  font-family: Minecraft字体;
   font-weight: #;
   text-align: center;
   line-height: 40px; /* 使文本垂直居中 */
@@ -88,10 +88,11 @@ h6 {
 
 h2 {
   font-size: 24px;
+  font-family:Minecraft字体;
 }
 
 button {
-  font-family: "Minecraft字体";
+  font-family: "MC";
   height: 48px;
   background-color: #d0d1d4;
   color: #000000;
@@ -111,6 +112,27 @@ button:active {
   padding-bottom: 2px;
   background-color: #b1b2b5;
   box-shadow: inset 3px 3px rgba(255, 255, 255, 0.8), inset -3px -3px rgba(255, 255, 255, 0.6);
+}
+
+.green_btn {
+    background-color: #3C8527;
+    color: #FFFFFF;
+    padding-bottom: 6px;
+    border: 2px solid #1E1E1F;
+    box-shadow: inset 0 -4px #1D4D13, inset 3px 3px rgba(255, 255, 255, 0.2), inset -3px -7px rgba(255, 255, 255, 0.1);
+}
+
+.green_btn:hover {
+    background-color: #2A641C;
+    box-shadow: inset 0 -4px #1D4D13, inset 3px 3px rgba(255, 255, 255, 0.4), inset -3px -7px rgba(255, 255, 255, 0.3);
+}
+
+.green_btn:active {
+    margin-top: 4px;
+    height: 44px;
+    padding-bottom: 2px;
+    background-color: #1D4D13;
+    box-shadow: inset 3px 3px rgba(255, 255, 255, 0.4), inset -3px -3px rgba(255, 255, 255, 0.3);
 }
 
 .标题栏 {
