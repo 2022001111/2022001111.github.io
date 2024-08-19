@@ -625,7 +625,15 @@ target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-s
     });
 </script>
 
+<script>
+    function redirectBasedOnDevice() {
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.location.href = 'link-html/phone/index.html';
+      } 
+    }
 
+    redirectBasedOnDevice();
+  </script>
 
 
 
