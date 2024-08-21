@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #e0e0e0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .content {
+            position: relative;
+            margin-top: auto;
+            margin-bottom: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .app-name {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            height: 75vh;
+        }
+        .images img {
+            height: 75%;
+            margin: 0 5px;
+        }
+        .button {
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+    <script>
+        window.onload = window.onresize = function() {
+            document.body.style.height = window.innerHeight + 'px';
+            document.querySelector('.content').style.height = window.innerHeight + 'px';
+            document.querySelector('.images').style.height = window.innerHeight * 0.75 + 'px';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="dztlogo.png" alt="icon">
+        <span>掉渣田APP</span>
+    </div>
+    <div class="content">
+        <div class="app-name">掉渣田APP</div>
+        <div class="images">
+            <img src=images/Phone/xuanchuan1.jpg alt="你网不好">
+            <img src=images/Phone/xuanchuan2.jpg alt="你网不好²">
+        </div>
+        <a href="https://www.123pan.com/s/Agx4jv-EXczv.html" class="button">立即下载</a>
+    </div>
+</body>
+</html>
