@@ -1,4 +1,3 @@
-</html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +39,6 @@
             height: 100%;
             object-fit: cover;
         }
-
 
         a {
             text-decoration: none;
@@ -115,47 +113,37 @@
             /* 确保它在浅灰矩形下方 */
         }
     </style>
-
-
 </head>
 
-
 <body>
-
-
-
-    <div class="blue-rectangle"></div>
-    <div class="gray-rectangle"></div>
-    <div class="black-rectangle"></div>
-
-    <table>
-        <tr>
-            <td><a href="https://armt.072211.xyz" target="_blank"><img src="https://armt.072211.xyz/dztlogo.png"
-                        width="60" height="60" class="no-change"></a>
-            </td>
-            <td>
-                <div class="MinecraftTen-VGORe" style="font-size:50px"> AR掉渣田•官网</div>
-            </td>
-
-        </tr>
-    </table>
-
+    <div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
+        <table>
+            <div class="blue-rectangle"></div>
+            <div class="gray-rectangle"></div>
+            <div class="black-rectangle"></div>
+            <table>
+                <tr>
+                    <td><a href="https://armt.072211.xyz" target="_blank"><img src="https://armt.072211.xyz/dztlogo.png"
+                                width="60" height="60" class="no-change"></a>
+                    </td>
+                    <td>
+                        <div class="MinecraftTen-VGORe" style="font-size:50px"> AR掉渣田•官网</div>
+                    </td>
+                </tr>
+            </table>
+        </table>
+    </div>
     <!--  
 <HR align=center width=1500 color=green SIZE=3 >
  -->
-
-    <div style="height: 80px;"></div>
-
-
+    <div style="height: 100px;"></div>
     <div class="custom-rectangle">
         <div class="carousel" id="carousel"></div>
     </div>
-
     <script>
         let images = [];
         let currentImageIndex = 0;
         const carousel = document.getElementById('carousel');
-
         // 动态添加图片到轮播容器
         function addImage(imageUrl) {
             const imgElement = document.createElement('img');
@@ -164,49 +152,30 @@
             carousel.appendChild(imgElement);
             updateCarousel();
         }
-
         // 初始化轮播
         function initializeCarousel() {
             addImage('images/Slim.jpg'); // 图片1
             addImage('images/Screenshot 2.jpg'); // 图片2 
             addImage('images/ARMT logo.png'); // 图片3
         }
-
         // 更新轮播
         function updateCarousel() {
             carousel.style.transform = `translateX(-${currentImageIndex * 100}%)`;
             currentImageIndex = (currentImageIndex + 1) % images.length;
         }
-
         // 自动轮播时间
         setInterval(updateCarousel, 4000);
-
         initializeCarousel();
     </script>
-
-
-
-
-
-
     <!-- old
     <td><h1>掉渣田测试官网</h1></td>
                                         -->
-
-
     <!-- 轮播图片 -->
-
-
-
-
     <!-- 		
   字体
   <div class="MinecraftTen-VGORe"></div>	
 		<div class="Minecraft字体"></div>
-
                                       -->
-
-
     <style type="text/css">
         @font-face {
             font-family: 'MinecraftTen-VGORe';
@@ -230,31 +199,16 @@
             text-shadow: none;
         }
     </style>
-
-
     <p> <br> <br> <br> </p>
     <!-- 间隔 -->
     <!--
     <center>
         <p style="font-size:55px;color:#DC9613;font-family:Minecraft字体">「今日封神榜」</p>
     </center>
-
 <HR align=center width=1300 color=#DC9613 SIZE=4 >
-
 <p style="font-size:30"> 小慕小木&nbsp&nbsp𝓧𝓲𝓪𝓸𝓯𝓮𝓲&nbsp&nbsp拟态势 </p>
-
 <HR align=center width=1300 color=#DC9613 SIZE=4 ></HR>   -->
-
-
-
     <div style="height: 5px;"></div>
-
-
-
-
-
-
-
     <div class="custom-modal-background">
         <div class="top-border">
             <span class="close">x</span>
@@ -268,19 +222,14 @@
         </div>
         <div class="bottom-border"></div>
     </div>
-
-
     <script>
         // 获取模态窗口
         var modal = document.querySelector('.custom-modal-background');
-
         // 模拟显示窗口
         modal.style.display = "block";
-
         // 获取关闭按钮
         var span = document.getElementsByClassName("close")[0];
         var confirmButton = document.getElementsByClassName("bottom-style2")[0];
-
         // 当用户点击关闭按钮或确认按钮时，关闭模态窗口
         span.onclick = function () {
             modal.style.display = "none";
@@ -288,7 +237,6 @@
         confirmButton.onclick = function () {
             modal.style.display = "none";
         }
-
         // 当用户点击窗口外的任意位置时，关闭模态窗口
         window.onclick = function (event) {
             if (event.target == modal) {
@@ -296,105 +244,75 @@
             }
         }
     </script>
-
-
-
     <div style="height: 60px;"></div>
-
-
     <p class="text-with-background" style="text-align:center;font-size:50px">——————&nbsp公告&nbsp——————</p>
     <p style="font-size:30px;font-family:Minecraft字体">• AR掉渣田官网正式开放！<br>• 掉渣田群聊/团队现正式升级名称为“掉渣田社区”！</p>
-
     <!-- 
 <p class="gray-italic-text">暂无公告</p> 
 -->
-
     <p class="text-with-background" style="text-align: center;font-size:50px;">——————&nbsp相关链接&nbsp——————</p>
-
-
-
     <table>
         <tr>
             <td><img src="images/bililogo.png" alt=" " width="30" height="30"></td>
             <td>
                 <p style="font-family:Minecraft字体;font-size:30px">哔哩哔哩主页</p>
             </td>
-
             <td>
                 <a href="https://space.bilibili.com/1441611827" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
                         height="40" width="40"></a>
-
             </td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td><img src="images/dy.png" alt=" " width="30" height="30"></td>
             <td>
                 <p style="font-family:Minecraft字体;font-size:30px">抖音主页</p>
             </td>
-
             <td>
                 <a href="https://m.douyin.com/share/user/MS4wLjABAAAAERGEJOMI4fSjHr-QcNw-_myotfnyLanXcC2HISt-ptS_MIxlJXMKDsiKf02YAp0i"
                     id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40" width="40"></a>
-
             </td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td><img src="images/ks.png" alt=" " width="30" height="30"></td>
             <td>
                 <p style="font-family:Minecraft字体;font-size:30px">快手主页</p>
             </td>
-
             <td>
                 <a href="https://v.kuaishou.com/P1phIF" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
                         height="40" width="40"></a>
-
             </td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td><img src="images/wb.png" alt=" " width="30" height="30"></td>
             <td>
                 <p style="font-family:Minecraft字体;font-size:30px">微博主页</p>
             </td>
-
             <td>
                 <a href="https://weibo.com/u/7879006938" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
                         height="40" width="40"></a>
-
             </td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td><img src="images/mgggw.jpg" alt=" " width="30" height="30"></td>
             <td>
                 <p style="font-family:Minecraft字体;font-size:30px">妙狗狗国王个人网站</p>
             </td>
-
             <td>
                 <a href="https://xluofox.us.kg" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40"
                         width="40"></a>
-
             </td>
         </tr>
     </table>
-
-
     <p class="text-with-background" style="text-align: center;font-size:50px">——————&nbsp加入社区&nbsp——————</p>
-
-
-
     <p style="font-size:30px">［相关群聊］</p>
-
     <p style="font-family:MinecraftTen-VGORe;color:#61A861;font-size:25px;">
         375308994<br>165173946<br>722377116<br>336740416<br>808453476<br>963216063</p>
     <p style="font-size:30px">［相关团队］</p>
@@ -406,7 +324,6 @@
                     Traffic 建设团队 【Q群966234858】<br></a></td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td><img src="images/armt-logo.png" alt=" " width="30" height="30"></td>
@@ -415,7 +332,6 @@
                     AR麦铁铁路建设团队 【Q群935292850】</a></td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td>
@@ -436,11 +352,7 @@
                         width="60"></a></td>
         </tr>
     </table>
-
-
-
     <p class="text-with-background" style="text-align: center;font-size:50px;">——————&nbsp官方内容获取&nbsp——————</p>
-
     <table>
         <tr>
             <td>
@@ -450,7 +362,6 @@
                         height="60" width="60"></a></td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td>
@@ -461,7 +372,6 @@
                         src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
         </tr>
     </table>
-
     <table>
         <tr>
             <td>
@@ -500,9 +410,7 @@
                         width="60"></a></td>
         </tr>
     </table>
-
     <p class="text-with-background" style="font-size:50px;font-family:Minecraft字体">宣传视频</p>
-
     <!-- <img src="" alt="">
 <video width="1280" height="720" controls>
   <source src="mbeFabu.mp4" type="video/mp4">
@@ -510,19 +418,13 @@
   您的浏览器不支持 HTML5 video 标签。
 </video>
 <pstyle="font-family:arial;color:grey;font-size:8px;">[video]</p> -->
-
     <iframe src="https://player.bilibili.com/player.html?bvid=BV1Vm42157H7&page=1" scrolling="no" border="0"
         frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="720"> </iframe>
-
     <iframe src="https://player.bilibili.com/player.html?bvid=BV1wy411i7bz&page=1" scrolling="no" border="0"
         frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="720"> </iframe>
-
-
     <p class="text-with-background" style="font-size:40px;font-family:Minecraft字体">NEW：获取官方披风！</p>
-
     <table>
         <tr>
-
             <td>
                 <div class="image-container">
                     <img src="images/fsf-light.png" alt="light">
@@ -551,12 +453,10 @@
                     <img src="images/mmdyzy-cape.png" alt="mmdyzy">
                 </div>
             </td>
-
         </tr>
     </table>
     <table>
         <tr>
-
             <td>
                 <p style="font-size:30px;font-family:Minecraft字体">FSF披风&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp</p>
             </td>
@@ -574,42 +474,31 @@
     </br></br>
     <table>
         <tr>
-
             <td><a href="https://armt.072211.xyz/images/FSF披风.png"><button class="button-style">立即获取！</button></a></td>
             <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             </td>
             <td><a href="mailto:2142258771@qq.com"><button class="button-style"
                         onclick="Getbutton()">私信邮箱获取！</button></a></td>
-
             <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             </td>
             <td><a href="##"><button class="button-style">不予获取</button></a></td>
-
             <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
             </td>
             <td><a href="##"><button class="button-style">不予获取</button></a></td>
-
-
             <!-- 烂代码别看了（恼 -->
         </tr>
     </table>
-
-
     <script>
         function Getbutton() {
             alert('私信邮箱：2142258771@qq.com\n发送“FSF披风”到邮箱，即可获取！（等待回复）\n【限定20份】');
         }
     </script>
     </br></br>
-
-
-
     <a href="##" id="toggleLink">
         <p style="font-size:20px;font-family:Minecraft字体">下载之前，您需要阅读并承诺一段条约&nbsp∨</p>
     </a>
     <p id="content" style="display: none;font-family:Minecraft字体;font-size:20px">
         您不能将拥有的披风文件以任何方式分享、上传到其他地方或其他人，感谢配合社区制度。</p>
-
     <script>document.getElementById('toggleLink').addEventListener('click', function () {
             var content = document.getElementById('content');
             if (content.style.display === 'none') {
@@ -618,24 +507,17 @@
                 content.style.display = 'none';
             }
         });</script>
-
     <p style="font-size:10px;font-family:Minecraft字体">*如无法获取请联系UP</p>
-
     <a href="https://armt.072211.xyz/link-html/phone/index.html">
         <p class="text-with-background" style="text-align: center;font-size:12px;">进入手机版</p>
     </a>
     <!--
 <a href="https://armt.072211.xyz/">
-
  <img src="https://armt.072211.xyz/images/new-dztlogo.png" alt="Centered Image" class="no-change" Width="" height=""> 
-
 </a>
 -->
-
     <p> <br> <br> </p>
-
     <HR align=center width=100% color=green SIZE=3>
-
     <table>
         <tr>
             <td>
@@ -645,23 +527,16 @@
             </td>
         </tr>
     </table>
-
     <script src="main.js"></script>
-
-
-
     <!-- 音频文件预加载 -->
     <audio id="sound1" src="eat.mp3" preload="auto"></audio>
     <audio id="sound2" src="Q.mp3" preload="auto"></audio>
     <audio id="sound3" src="aqtw.mp3" preload="auto"></audio>
     <div class="blackRectangle"></div>
-
-
     <!-- 按钮，点击后播放不同的音频 -->
     <button class="button-style" id="button1" onclick="playSound('sound1')">Don't click</button>
     <button class="button-style" id="button2" onclick="playSound('sound2')">Don't click</button>
     <button class="button-style" id="button3" onclick="playSound('sound3')">Don't click</button>
-
     <script>
         // JavaScript函数，用于播放音频
         function playSound(soundId) {
@@ -670,7 +545,6 @@
             audio.play();
         }
     </script>
-
     <a href="link-html/warning/index.html">
         <p style="color:red;font-size:30px"><i>[⚠️]</p>
     </a>
@@ -680,7 +554,6 @@
         <p>您的浏览器不支持 iframe，但您可以通过以下链接访问目标网页：<a href="https://xluofox.us.kg">访问示例网站</a></p>
     </iframe>
     -->
-
     <style>
         .gray-italic-text {
             color: gray;
@@ -689,13 +562,9 @@
             /* 设置文本为斜体 */
         }
     </style>
-
-
-
     <p class="gray-italic-text"> <br> <br>
         <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br>特别鸣谢：WSD_KW<br><br>Falling slag
         Field<br>AR • 掉渣田-2023/11/14创立<br>电脑版视图
-
         <!--
    <div style="height: 80px;"></div>
 	  <div class="blue2-rectangle"></div>
@@ -704,47 +573,36 @@
 	  -->
     </p>
     <p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    </p>
     <!--
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1QE421c7a4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="200" height="200"> </iframe>
 -->
-
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const characters = ['2', '🎉', '🐛', '🎈', '🐛'];
             const numChars = 50; // 可以根据需要调整字符数量
-
             for (let i = 0; i < numChars; i++) {
                 const charDiv = document.createElement('div');
                 charDiv.className = 'falling-character';
                 charDiv.textContent = characters[Math.floor(Math.random() * characters.length)];
-
                 // 随机水平位置
                 charDiv.style.left = `${Math.random() * 100}%`;
-
                 // 随机垂直初始位置，稍微从顶部开始，增加分散感
                 charDiv.style.top = `${Math.random() * -2}vh`; // 这里让字符从最顶部的0%到20%间开始
-
                 charDiv.style.animationDelay = `${Math.random() * 6}s`; // 随机动画延迟
                 document.body.appendChild(charDiv);
             }
         });
     </script>
-
     <script>
         function redirectBasedOnDevice() {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
                 window.location.href = 'link-html/phone/index.html';
             }
         }
-
         redirectBasedOnDevice();
     </script>
-
-
-
 </body>
 
 </html>
