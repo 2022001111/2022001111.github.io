@@ -211,17 +211,21 @@
     <div style="height: 5px;"></div>
     <div class="custom-modal-background">
         <div class="top-border">
-            <span class="close">x</span>
-        </div>
-        <div class="middle">
-            <div class="img-container">
-                <img src="images/year.jpg" style="width:40%; height:auto;">
+            <div class="middle">
+
+                <div class="bottom-border">
+                    <div class="img-container">
+                        <img src="images/year.jpg" style="width:40%; height:auto;">
+                    </div>
+                    <p style="font-family:Minecraft字体;font-size:30px">今天是不想取名的阿peng入驻B站两周年！</p>
+                    <button class="bottom-style2">确认</button>
+                </div>
+
             </div>
-            <p style="font-family:Minecraft字体;font-size:30px">今天是不想取名的阿peng入驻B站两周年！</p>
-            <button class="bottom-style2">确认</button>
         </div>
-        <div class="bottom-border"></div>
+        <span class="close">x</span>
     </div>
+
     <script>
         // 获取模态窗口
         var modal = document.querySelector('.custom-modal-background');
@@ -486,6 +490,8 @@
             </td>
             <td><a href="##"><button class="button-style">不予获取</button></a></td>
             <!-- 烂代码别看了（恼 -->
+            <!-- 我就看 -->
+
         </tr>
     </table>
     <script>
@@ -564,7 +570,7 @@
     </style>
     <p class="gray-italic-text"> <br> <br>
         <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br>特别鸣谢：WSD_KW<br><br>Falling slag
-        Field<br>AR • 掉渣田-2023/11/14创立<br>电脑版视图
+        Field<br>AR • 掉渣田-2023/11/14创立<br>电脑版视图<br>真的有人会看这些吗
         <!--
    <div style="height: 80px;"></div>
 	  <div class="blue2-rectangle"></div>
@@ -572,16 +578,16 @@
 	  <div class="black2-rectangle"></div>
 	  -->
     </p>
-    <p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <!-- <p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
         <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    </p>
+    </p> -->
     <!--
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1QE421c7a4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="200" height="200"> </iframe>
 -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const characters = ['2', '🎉', '🐛', '🎈', '🐛'];
-            const numChars = 50; // 可以根据需要调整字符数量
+            const numChars = 100; // 可以根据需要调整字符数量
             for (let i = 0; i < numChars; i++) {
                 const charDiv = document.createElement('div');
                 charDiv.className = 'falling-character';
@@ -598,7 +604,9 @@
     <script>
         function redirectBasedOnDevice() {
             if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                window.location.href = 'link-html/phone/index.html';
+                if (confirm("是否跳转手机版？")) {
+                    window.location.href = 'link-html/phone/index.html';
+                }
             }
         }
         redirectBasedOnDevice();
