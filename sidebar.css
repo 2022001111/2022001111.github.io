@@ -1,63 +1,81 @@
 /* 侧边栏菜单 */
 .sidebar {
-    height: 100%; /* 100% 全高 */
-    width: 0; /* 0 宽度 - 使用 JavaScript 更改 */
-    position: fixed; /* 原地不动 */
-    z-index: 1; /* 保持在顶部 */
+    height: 100%;
+    /* 100% 全高 */
+    width: 0;
+    /* 0 宽度 - 使用 JavaScript 更改 */
+    position: fixed;
+    /* 原地不动 */
+    z-index: 1;
+    /* 保持在顶部 */
     top: 0;
     left: 0;
-    background-color: #111; /* 黑色*/
-    overflow-x: hidden; /* 禁用水平滚动 */
-    padding-top: 60px; /* 将内容从顶部放置 60px */
-    transition: 0.5s; /* 0.5 秒过渡效果在侧边栏中滑动 */
-  }
-  
-  /* 侧边栏链接 */
-  .sidebar a {
+    background-color: #313234;
+    /* 黑色*/
+    overflow-x: hidden;
+    /* 禁用水平滚动 */
+    padding-top: 60px;
+    /* 将内容从顶部放置 60px */
+    transition: 0.5s;
+    /* 0.5 秒过渡效果在侧边栏中滑动 */
+    z-index: 1146;
+    border: 1px solid #ffffff;
+    font-family: 'Minecraft字体';
+
+}
+
+/* 侧边栏链接 */
+.sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
-  
-  /* 当您将鼠标悬停在导航链接上时，更改它们的颜色 */
-  .sidebar a:hover {
+}
+
+/* 当您将鼠标悬停在导航链接上时，更改它们的颜色 */
+.sidebar a:hover {
     color: #f1f1f1;
-  }
-  
-  /* 关闭按钮的位置和样式（右上角） */
-  .sidebar .closebtn {
+}
+
+/* 关闭按钮的位置和样式（右上角） */
+.sidebar .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
-  
-  /* 用于打开侧边栏的按钮 */
-  .openbtn {
+}
+
+/* 用于打开侧边栏的按钮 */
+.openbtn {
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
     color: white;
     padding: 10px 15px;
     border: none;
-  }
-  
-  .openbtn:hover {
+}
+
+.openbtn:hover {
     background-color: #444;
-  }
-  
-  /* 样式页面内容 - 如果您想在打开侧导航时将页面内容推送到右侧，请使用此选项 */
-  #main {
-    transition: margin-left .5s; /* 如果你想要一个过渡效果 */
-    padding: 20px;
-  }
-  
-  /* 在高度小于 450 像素的小屏幕上，更改 sidenav 的样式（更少的填充和更小的字体大小）*/
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
+}
+
+/* 样式页面内容 - 如果您想在打开侧导航时将页面内容推送到右侧，请使用此选项 */
+#main {
+    transition: margin-left .5s;
+    /* 如果你想要一个过渡效果 */
+    padding: 0px;
+}
+
+/* 在高度小于 450 像素的小屏幕上，更改 sidenav 的样式（更少的填充和更小的字体大小）*/
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
