@@ -3,11 +3,24 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="typeface.css">
+    <link  rel="stylesheet" href="./sidebar.css">
     <meta charset="UTF-8">
     <meta name="apeng"" content=" AR掉渣田官网•AR Team">
     <link rel="manifest" href="manifest.json">
     <title>AR掉渣田•官网（AR Team）</title>
     <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .neirong {
+            border: 5px inset white;
+        }
+
         /* 之前的矩形样式 */
         .custom-rectangle {
             width: 910px;
@@ -42,6 +55,22 @@
 
         a {
             text-decoration: none;
+        }
+
+        .menu {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            /* 假设父元素的高度为100% */
+            height: 100%;
+            max-width: 100vh;
+            /* 使宽度等于视口高度，以确保正方形 */
+            max-height: 100vh;
+            /* 使高度等于视口高度，以确保正方形 */
+            background-color: #E7E8EC;
+            /* 示例背景颜色 */
         }
     </style>
     <style>
@@ -116,11 +145,21 @@
 </head>
 
 <body>
-    <div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
+    <script src="./sidebar.js"></script>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+      
+      
+    <div style="position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;"><!--标题栏-->
+        <div class="blue-rectangle"></div>
+        <div class="gray-rectangle"></div>
+        <div class="black-rectangle"></div>
         <table>
-            <div class="blue-rectangle"></div>
-            <div class="gray-rectangle"></div>
-            <div class="black-rectangle"></div>
             <table>
                 <tr>
                     <td><a href="https://armt.072211.xyz" target="_blank"><img src="https://armt.072211.xyz/dztlogo.png"
@@ -131,6 +170,11 @@
                     </td>
                 </tr>
             </table>
+            <div class="menu">
+                <!-- <div id="main">
+                    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+                  </div> -->
+            </div>
         </table>
     </div>
     <!--  
@@ -248,272 +292,339 @@
             }
         }
     </script>
-    <div style="height: 60px;"></div>
-    <p class="text-with-background" style="text-align:center;font-size:50px">——————&nbsp公告&nbsp——————</p>
-    <p style="font-size:30px;font-family:Minecraft字体">• AR掉渣田官网正式开放！<br>• 掉渣田群聊/团队现正式升级名称为“掉渣田社区”！</p>
-    <!-- 
+    <div class="container"><!--主内容-->
+        <div class="neirong"><!--公告-->
+            <div style="height: 60px;"></div>
+            <p class="text-with-background" style="text-align:center;font-size:50px">&nbsp公告&nbsp</p>
+            <p style="font-size:30px;font-family:Minecraft字体">• AR掉渣田官网正式开放！<br>• 掉渣田群聊/团队现正式升级名称为“掉渣田社区”！</p>
+            <!-- 
 <p class="gray-italic-text">暂无公告</p> 
 -->
-    <p class="text-with-background" style="text-align: center;font-size:50px;">——————&nbsp相关链接&nbsp——————</p>
-    <table>
-        <tr>
-            <td><img src="images/bililogo.png" alt=" " width="30" height="30"></td>
-            <td>
-                <p style="font-family:Minecraft字体;font-size:30px">哔哩哔哩主页</p>
-            </td>
-            <td>
-                <a href="https://space.bilibili.com/1441611827" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="40" width="40"></a>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td><img src="images/dy.png" alt=" " width="30" height="30"></td>
-            <td>
-                <p style="font-family:Minecraft字体;font-size:30px">抖音主页</p>
-            </td>
-            <td>
-                <a href="https://m.douyin.com/share/user/MS4wLjABAAAAERGEJOMI4fSjHr-QcNw-_myotfnyLanXcC2HISt-ptS_MIxlJXMKDsiKf02YAp0i"
-                    id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40" width="40"></a>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td><img src="images/ks.png" alt=" " width="30" height="30"></td>
-            <td>
-                <p style="font-family:Minecraft字体;font-size:30px">快手主页</p>
-            </td>
-            <td>
-                <a href="https://v.kuaishou.com/P1phIF" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="40" width="40"></a>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td><img src="images/wb.png" alt=" " width="30" height="30"></td>
-            <td>
-                <p style="font-family:Minecraft字体;font-size:30px">微博主页</p>
-            </td>
-            <td>
-                <a href="https://weibo.com/u/7879006938" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="40" width="40"></a>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td><img src="images/mgggw.jpg" alt=" " width="30" height="30"></td>
-            <td>
-                <p style="font-family:Minecraft字体;font-size:30px">妙狗狗国王个人网站</p>
-            </td>
-            <td>
-                <a href="https://xluofox.us.kg" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40"
-                        width="40"></a>
-            </td>
-        </tr>
-    </table>
-    <p class="text-with-background" style="text-align: center;font-size:50px">——————&nbsp加入社区&nbsp——————</p>
-    <p style="font-size:30px">［相关群聊］</p>
-    <p style="font-family:MinecraftTen-VGORe;color:#61A861;font-size:25px;">
-        375308994<br>165173946<br>722377116<br>336740416<br>808453476<br>963216063</p>
-    <p style="font-size:30px">［相关团队］</p>
-    <table>
-        <tr>
-            <td><img src="images/traffic-logo.png" alt=" " width="30" height="30"></td>
-            <td><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=iMysqIWAS0dKMNrQq_UnftSl9QPNQ_Gx&authKey=B2uRTZ2MrCpgS7nMXwjcq5LmaMqMx4EJTyzVnTSJiG3AfOqIo2kGKWte6ngMAkwR&noverify=0&group_code=966234858"
-                    target="_blank" title=" " style="font-family:Minecraft字体;color:orange;;font-size:25px;">加入Minecraft
-                    Traffic 建设团队 【Q群966234858】<br></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td><img src="images/armt-logo.png" alt=" " width="30" height="30"></td>
-            <td><a href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0IRoQaVIMk1gHNV0Wl4I1mKPVKwuQ72O&authKey=UM513U%2F0cOpG%2F7riLcUuxKmqBl1r7%2BBrcNT5HS4fVR5JpYNRE3BSqbc0hXFWyCJz&noverify=0&group_code=935292850"
-                    target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-size:25px;">加入MC
-                    AR麦铁铁路建设团队 【Q群935292850】</a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="font-size:30px">［云湖社区］</p>
-            </td>
-            <td>
-            <td><a href="https://www.yhchat.com/group/homepage/485371270?userId=4298982"><img
-                        src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="font-size:30px">［QQ频道］</p>
-            </td>
-            <td>
-            <td><a href="https://pd.qq.com/s/7g7aomjpv"><img src="images/ore-jump-to.png" alt="点击跳转" height="60"
-                        width="60"></a></td>
-        </tr>
-    </table>
-    <p class="text-with-background" style="text-align: center;font-size:50px;">——————&nbsp官方内容获取&nbsp——————</p>
-    <table>
-        <tr>
-            <td>
-                <p style="color:219C53;font-size:40">点击按钮下载官方APP</p>
-            </td>
-            <td><a href="https://www.123pan.com/s/Agx4jv-EXczv.html"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="60" width="60"></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="color:219C53;font-size:40">点击按钮下载键位海报</p>
-            </td>
-            <td><a
-                    href="https://gitdl.cn/https://raw.githubusercontent.com/2022001111/22001picture/main/1719738754975.png"><img
-                        src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="color:219C53;font-size:40">点击按钮下载仿基岩键位（MBE）</p>
-            </td>
-            <td><a href="https://www.123pan.com/s/Agx4jv-qDZzv.html"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="60" width="60"></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="color:219C53;font-size:40">点击按钮下载仿基岩修改版键位（MBE-UM）</p>
-            </td>
-            <td><a href="https://vip.123pan.cn/1825094531/7185147"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="60" width="60"></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="font-size:30px">［群规查阅］</p>
-            </td>
-            <td>
-            <td><a href="https://docs.qq.com/doc/DWU5rV3FIWWRnWm9N"><img src="images/ore-jump-to.png" alt="点击跳转"
-                        height="60" width="60"></a></td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="font-size:30px">［键位更新日志查询］</p>
-            </td>
-            <td>
-            <td><a href="link-html/oreload/index.html"><img src="images/ore-jump-to.png" alt="点击跳转" height="60"
-                        width="60"></a></td>
-        </tr>
-    </table>
-    <p class="text-with-background" style="font-size:50px;font-family:Minecraft字体">宣传视频</p>
-    <!-- <img src="" alt="">
-<video width="1280" height="720" controls>
-  <source src="mbeFabu.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  您的浏览器不支持 HTML5 video 标签。
-</video>
-<pstyle="font-family:arial;color:grey;font-size:8px;">[video]</p> -->
-    <iframe src="https://player.bilibili.com/player.html?bvid=BV1Vm42157H7&page=1" scrolling="no" border="0"
-        frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="720"> </iframe>
-    <iframe src="https://player.bilibili.com/player.html?bvid=BV1wy411i7bz&page=1" scrolling="no" border="0"
-        frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="720"> </iframe>
-    <p class="text-with-background" style="font-size:40px;font-family:Minecraft字体">NEW：获取官方披风！</p>
-    <table>
-        <tr>
-            <td>
-                <div class="image-container">
-                    <img src="images/fsf-light.png" alt="light">
+        </div>
+        <div class="neirong"><!--相关链接-->
+            <p class="text-with-background" style="text-align: center;font-size:50px;">&nbsp相关链接&nbsp</p>
+            <table>
+                <tr>
+                    <td><img src="images/bililogo.png" alt=" " width="30" height="30"></td>
+                    <td>
+                        <p style="font-family:Minecraft字体;font-size:30px">哔哩哔哩主页</p>
+                    </td>
+                    <td>
+                        <a href="https://space.bilibili.com/1441611827" id="myLink"><img src="images/ore-jump-to.png"
+                                alt="点击跳转" height="40" width="40"></a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="images/dy.png" alt=" " width="30" height="30"></td>
+                    <td>
+                        <p style="font-family:Minecraft字体;font-size:30px">抖音主页</p>
+                    </td>
+                    <td>
+                        <a href="https://m.douyin.com/share/user/MS4wLjABAAAAERGEJOMI4fSjHr-QcNw-_myotfnyLanXcC2HISt-ptS_MIxlJXMKDsiKf02YAp0i"
+                            id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转" height="40" width="40"></a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="images/ks.png" alt=" " width="30" height="30"></td>
+                    <td>
+                        <p style="font-family:Minecraft字体;font-size:30px">快手主页</p>
+                    </td>
+                    <td>
+                        <a href="https://v.kuaishou.com/P1phIF" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
+                                height="40" width="40"></a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="images/wb.png" alt=" " width="30" height="30"></td>
+                    <td>
+                        <p style="font-family:Minecraft字体;font-size:30px">微博主页</p>
+                    </td>
+                    <td>
+                        <a href="https://weibo.com/u/7879006938" id="myLink"><img src="images/ore-jump-to.png"
+                                alt="点击跳转" height="40" width="40"></a>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="images/mgggw.jpg" alt=" " width="30" height="30"></td>
+                    <td>
+                        <p style="font-family:Minecraft字体;font-size:30px">妙狗狗国王个人网站</p>
+                    </td>
+                    <td>
+                        <a href="https://xluofox.us.kg" id="myLink"><img src="images/ore-jump-to.png" alt="点击跳转"
+                                height="40" width="40"></a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="neirong"><!--加入社区-->
+
+            <p class="text-with-background" style="text-align: center;font-size:50px">&nbsp加入社区&nbsp</p>
+            <p style="font-size:30px">［相关群聊］</p>
+            <p style="font-family:MinecraftTen-VGORe;color:#61A861;font-size:25px;">
+                375308994<br>165173946<br>722377116<br>336740416<br>808453476<br>963216063</p>
+            <p style="font-size:30px">［相关团队］</p>
+            <table>
+                <tr>
+                    <td><img src="images/traffic-logo.png" alt=" " width="30" height="30"></td>
+                    <td><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=iMysqIWAS0dKMNrQq_UnftSl9QPNQ_Gx&authKey=B2uRTZ2MrCpgS7nMXwjcq5LmaMqMx4EJTyzVnTSJiG3AfOqIo2kGKWte6ngMAkwR&noverify=0&group_code=966234858"
+                            target="_blank" title=" "
+                            style="font-family:Minecraft字体;color:orange;;font-size:25px;">加入Minecraft
+                            Traffic 建设团队 【Q群966234858】<br></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><img src="images/armt-logo.png" alt=" " width="30" height="30"></td>
+                    <td><a href="https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=0IRoQaVIMk1gHNV0Wl4I1mKPVKwuQ72O&authKey=UM513U%2F0cOpG%2F7riLcUuxKmqBl1r7%2BBrcNT5HS4fVR5JpYNRE3BSqbc0hXFWyCJz&noverify=0&group_code=935292850"
+                            target="_blank" title=" " style="font-family:Minecraft字体;color:orange;font-size:25px;">加入MC
+                            AR麦铁铁路建设团队 【Q群935292850】</a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="font-size:30px">［云湖社区］</p>
+                    </td>
+                    <td>
+                    <td><a href="https://www.yhchat.com/group/homepage/485371270?userId=4298982"><img
+                                src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="font-size:30px">［QQ频道］</p>
+                    </td>
+                    <td>
+                    <td><a href="https://pd.qq.com/s/7g7aomjpv"><img src="images/ore-jump-to.png" alt="点击跳转" height="60"
+                                width="60"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="neirong"><!--官方内容获取-->
+
+            <p class="text-with-background" style="text-align: center;font-size:50px;">&nbsp官方内容获取&nbsp</p>
+            <table>
+                <tr>
+                    <td>
+                        <p style="color:219C53;font-size:40">点击按钮下载官方APP</p>
+                    </td>
+                    <td><a href="https://www.123pan.com/s/Agx4jv-EXczv.html"><img src="images/ore-jump-to.png"
+                                alt="点击跳转" height="60" width="60"></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="color:219C53;font-size:40">点击按钮下载键位海报</p>
+                    </td>
+                    <td><a
+                            href="https://gitdl.cn/https://raw.githubusercontent.com/2022001111/22001picture/main/1719738754975.png"><img
+                                src="images/ore-jump-to.png" alt="点击跳转" height="60" width="60"></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="color:219C53;font-size:40">点击按钮下载仿基岩键位（MBE）</p>
+                    </td>
+                    <td><a href="https://www.123pan.com/s/Agx4jv-qDZzv.html"><img src="images/ore-jump-to.png"
+                                alt="点击跳转" height="60" width="60"></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="color:219C53;font-size:40">点击按钮下载仿基岩修改版键位（MBE-UM）</p>
+                    </td>
+                    <td><a href="https://vip.123pan.cn/1825094531/7185147"><img src="images/ore-jump-to.png" alt="点击跳转"
+                                height="60" width="60"></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="font-size:30px">［群规查阅］</p>
+                    </td>
+                    <td>
+                    <td><a href="https://docs.qq.com/doc/DWU5rV3FIWWRnWm9N"><img src="images/ore-jump-to.png" alt="点击跳转"
+                                height="60" width="60"></a></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p style="font-size:30px">［键位更新日志查询］</p>
+                    </td>
+                    <td>
+                    <td><a href="link-html/oreload/index.html"><img src="images/ore-jump-to.png" alt="点击跳转" height="60"
+                                width="60"></a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="neirong" style="width: 50vh;"><!--宣传视频-->
+            <p class="text-with-background" style="font-size:50px;font-family:Minecraft字体">宣传视频</p>
+            <div>
+                <button class="button-style" onclick="showVideo('video1')">如何导入键位</button>
+                <button class="button-style" onclick="showVideo('video2')">FCL宣传片</button>
+            </div>
+            <div id="video1" class="video-tab" style="display:block;">
+                <iframe src="https://player.bilibili.com/player.html?bvid=BV1Vm42157H7&page=1" scrolling="no" border="0"
+                    frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="720"> </iframe>
+            </div>
+            <div id="video2" class="video-tab" style="display:none;">
+                <iframe src="https://player.bilibili.com/player.html?bvid=BV1wy411i7bz&page=1" scrolling="no" border="0"
+                    frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="720"> </iframe>
+            </div>
+        </div>
+
+        <script>
+            function showVideo(videoId) {
+                var videos = document.getElementsByClassName('video-tab');
+                for (var i = 0; i < videos.length; i++) {
+                    videos[i].style.display = 'none';
+                }
+                document.getElementById(videoId).style.display = 'block';
+            }
+        </script>
+
+        <div class="neirong"><!--披风-->
+            <p class="text-with-background" style="font-size:40px;font-family:Minecraft字体">NEW：获取官方披风！</p>
+            <div class="neirong" style="display: flex;flex-direction: row;flex-wrap: nowrap;">
+                <div><!--fsf-->
+                    <div class="image-container">
+                        <img src="images/fsf-light.png" alt="light">
+                    </div>
+                    <p style="font-size:30px;font-family:Minecraft字体">FSF披风</p>
+                    <a href="https://armt.072211.xyz/images/FSF披风.png"><button class="button-style">立即获取！</button></a>
                 </div>
-            </td>
-            <td>
-                <p>&nbsp&nbsp&nbsp&nbsp</p>
-            </td>
-            <td>
-                <div class="image-container">
-                    <img src="images/fsf-dark.png" alt="dark">
+                <div><!--fsf-dark-->
+                    <div class="image-container">
+                        <img src="images/fsf-dark.png" alt="dark">
+                    </div>
+                    <p style="font-size:30px;font-family:Minecraft字体">FSF-Dark披风</p>
+                    <a href="mailto:2142258771@qq.com"><button class="button-style"
+                            onclick="Getbutton()">私信邮箱获取！</button></a>
                 </div>
-            </td>
-            <td>
-                <p>&nbsp&nbsp&nbsp&nbsp</p>
-            </td>
-            <td>
-                <div class="image-container">
-                    <img src="images/fsf-gold.png" alt="gold">
+                <div><!--fsf-zhiyin-->
+                    <div class="image-container">
+                        <img src="images/fsf-gold.png" alt="gold">
+                    </div>
+                    <p style="font-size:30px;font-family:Minecraft字体">FSF-Gold披风&nbsp&nbsp</p>
+                    <a href="##"><button class="button-style">不予获取</button></a>
                 </div>
-            <td>
-                <p>&nbsp&nbsp&nbsp&nbsp</p>
-            </td>
-            <td>
-                <div class="image-container">
-                    <img src="images/mmdyzy-cape.png" alt="mmdyzy">
+                <div><!--mmdyzy-->
+                    <div class="image-container">
+                        <img src="images/mmdyzy-cape.png" alt="mmdyzy">
+                    </div>
+                    <p style="font-size:30px;font-family:Minecraft字体">Mmdyzy披风</p>
+                    <a href="##"><button class="button-style">不予获取</button></a>
                 </div>
-            </td>
-        </tr>
-    </table>
-    <table>
-        <tr>
-            <td>
-                <p style="font-size:30px;font-family:Minecraft字体">FSF披风&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp</p>
-            </td>
-            <td>
-                <p style="font-size:30px;font-family:Minecraft字体">FSF-Dark披风&nbsp</p>
-            </td>
-            <td>
-                <p style="font-size:30px;font-family:Minecraft字体">FSF-Gold披风&nbsp&nbsp</p>
-            </td>
-            <td>
-                <p style="font-size:30px;font-family:Minecraft字体">Mmdyzy披风</p>
-            </td>
-        </tr>
-    </table>
-    </br></br>
-    <table>
-        <tr>
-            <td><a href="https://armt.072211.xyz/images/FSF披风.png"><button class="button-style">立即获取！</button></a></td>
-            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </td>
-            <td><a href="mailto:2142258771@qq.com"><button class="button-style"
-                        onclick="Getbutton()">私信邮箱获取！</button></a></td>
-            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </td>
-            <td><a href="##"><button class="button-style">不予获取</button></a></td>
-            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            </td>
-            <td><a href="##"><button class="button-style">不予获取</button></a></td>
+            </div>
+            <!-- <div>之前的烂代码（里面有菜单 -->
+            <!-- <table>
+                    <tr>
+                        <td>
+                            <div class="image-container">
+                                <img src="images/fsf-light.png" alt="light">
+                            </div>
+                        </td>
+                        <td>
+                            <p>&nbsp&nbsp&nbsp&nbsp</p>
+                        </td>
+                        <td>
+                            <div class="image-container">
+                                <img src="images/fsf-dark.png" alt="dark">
+                            </div>
+                        </td>
+                        <td>
+                            <p>&nbsp&nbsp&nbsp&nbsp</p>
+                        </td>
+                        <td>
+                            <div class="image-container">
+                                <img src="images/fsf-gold.png" alt="gold">
+                            </div>
+                        <td>
+                            <p>&nbsp&nbsp&nbsp&nbsp</p>
+                        </td>
+                        <td>
+                            <div class="image-container">
+                                <img src="images/mmdyzy-cape.png" alt="mmdyzy">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <p style="font-size:30px;font-family:Minecraft字体">FSF披风&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp
+                            </p>
+                        </td>
+                        <td>
+                            <p style="font-size:30px;font-family:Minecraft字体">FSF-Dark披风&nbsp</p>
+                        </td>
+                        <td>
+                            <p style="font-size:30px;font-family:Minecraft字体">FSF-Gold披风&nbsp&nbsp</p>
+                        </td>
+                        <td>
+                            <p style="font-size:30px;font-family:Minecraft字体">Mmdyzy披风</p>
+                        </td>
+                    </tr>
+                </table>
+                </br></br>
+                <table>
+                    <tr>
+                        <td><a href="https://armt.072211.xyz/images/FSF披风.png"><button
+                                    class="button-style">立即获取！</button></a></td>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        </td>
+                        <td><a href="mailto:2142258771@qq.com"><button class="button-style"
+                                    onclick="Getbutton()">私信邮箱获取！</button></a></td>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        </td>
+                        <td><a href="##"><button class="button-style">不予获取</button></a></td>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        </td>
+                        <td><a href="##"><button class="button-style">不予获取</button></a></td> -->
             <!-- 烂代码别看了（恼 -->
             <!-- 我就看 -->
+            <!--恭喜你发现彩蛋
+                     发送邮件到caidamn@072211.xyz有惊喜-->
 
-        </tr>
-    </table>
-    <script>
-        function Getbutton() {
-            alert('私信邮箱：2142258771@qq.com\n发送“FSF披风”到邮箱，即可获取！（等待回复）\n【限定20份】');
-        }
-    </script>
-    </br></br>
-    <a href="##" id="toggleLink">
-        <p style="font-size:20px;font-family:Minecraft字体">下载之前，您需要阅读并承诺一段条约&nbsp∨</p>
-    </a>
-    <p id="content" style="display: none;font-family:Minecraft字体;font-size:20px">
-        您不能将拥有的披风文件以任何方式分享、上传到其他地方或其他人，感谢配合社区制度。</p>
-    <script>document.getElementById('toggleLink').addEventListener('click', function () {
-            var content = document.getElementById('content');
-            if (content.style.display === 'none') {
-                content.style.display = 'block';
-            } else {
-                content.style.display = 'none';
-            }
-        });</script>
-    <p style="font-size:10px;font-family:Minecraft字体">*如无法获取请联系UP</p>
+            <!-- </tr>
+                </table>
+            </div> -->
+            <script>
+                function Getbutton() {
+                    alert('私信邮箱：2142258771@qq.com\n发送“FSF披风”到邮箱，即可获取！（等待回复）\n【限定20份】');
+                }
+            </script>
+            </br></br>
+            <a href="##" id="toggleLink">
+                <p style="font-size:20px;font-family:Minecraft字体">下载之前，您需要阅读并承诺一段条约&nbsp∨</p>
+            </a>
+            <p id="content" style="display: none;font-family:Minecraft字体;font-size:20px">
+                您不能将拥有的披风文件以任何方式分享、上传到其他地方或其他人，感谢配合社区制度。</p>
+            <script>document.getElementById('toggleLink').addEventListener('click', function () {
+                    var content = document.getElementById('content');
+                    if (content.style.display === 'none') {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });</script>
+            <p style="font-size:10px;font-family:Minecraft字体">*如无法获取请联系UP</p>
+        </div>
+
+    </div>
     <a href="https://armt.072211.xyz/link-html/phone/index.html">
         <p class="text-with-background" style="text-align: center;font-size:12px;">进入手机版</p>
     </a>
@@ -533,45 +644,48 @@
             </td>
         </tr>
     </table>
-    <script src="main.js"></script>
-    <!-- 音频文件预加载 -->
-    <audio id="sound1" src="eat.mp3" preload="auto"></audio>
-    <audio id="sound2" src="Q.mp3" preload="auto"></audio>
-    <audio id="sound3" src="aqtw.mp3" preload="auto"></audio>
-    <div class="blackRectangle"></div>
-    <!-- 按钮，点击后播放不同的音频 -->
-    <button class="button-style" id="button1" onclick="playSound('sound1')">Don't click</button>
-    <button class="button-style" id="button2" onclick="playSound('sound2')">Don't click</button>
-    <button class="button-style" id="button3" onclick="playSound('sound3')">Don't click</button>
-    <script>
-        // JavaScript函数，用于播放音频
-        function playSound(soundId) {
-            var audio = document.createElement('audio');
-            audio.src = document.getElementById(soundId).src;
-            audio.play();
-        }
-    </script>
-    <a href="link-html/warning/index.html">
-        <p style="color:red;font-size:30px"><i>[⚠️]</p>
-    </a>
-    <!--
+    </div>
+    <div>
+        <script src="main.js"></script>
+        <!-- 音频文件预加载 -->
+        <audio id="sound1" src="eat.mp3" preload="auto"></audio>
+        <audio id="sound2" src="Q.mp3" preload="auto"></audio>
+        <audio id="sound3" src="aqtw.mp3" preload="auto"></audio>
+        <div class="blackRectangle"></div>
+        <!-- 按钮，点击后播放不同的音频 -->
+        <button class="button-style" id="button1" onclick="playSound('sound1')">Don't click</button>
+        <button class="button-style" id="button2" onclick="playSound('sound2')">Don't click</button>
+        <button class="button-style" id="button3" onclick="playSound('sound3')">Don't click</button>
+        <script>
+            // JavaScript函数，用于播放音频
+            function playSound(soundId) {
+                var audio = document.createElement('audio');
+                audio.src = document.getElementById(soundId).src;
+                audio.play();
+            }
+        </script>
+        <a href="link-html/warning/index.html">
+            <p style="color:red;font-size:30px"><i>[⚠️]</p>
+        </a>
+        <!--
 <p><i>测试网页窗口</i></p>
     <iframe src="https://xluofox.us.kg" width="1280" height="720" title="Example Iframe">
         <p>您的浏览器不支持 iframe，但您可以通过以下链接访问目标网页：<a href="https://xluofox.us.kg">访问示例网站</a></p>
     </iframe>
     -->
-    <style>
-        .gray-italic-text {
-            color: gray;
-            /* 设置文本颜色为灰色 */
-            font-style: italic;
-            /* 设置文本为斜体 */
-        }
-    </style>
-    <p class="gray-italic-text"> <br> <br>
-        <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br>特别鸣谢：WSD_KW<br><br>Falling slag
-        Field<br>AR • 掉渣田-2023/11/14创立<br>电脑版视图<br>真的有人会看这些吗
-        <!--
+        <style>
+            .gray-italic-text {
+                color: gray;
+                /* 设置文本颜色为灰色 */
+                font-style: italic;
+                /* 设置文本为斜体 */
+            }
+        </style>
+        <p class="gray-italic-text"> <br> <br>
+            <br>-联系我们-<br>QQ:2142258771<br>邮箱：2142258771@qq.com<br>哔哩哔哩：不想取名的阿peng<br>特别鸣谢：WSD_KW<br><br>Falling slag
+            Field<br>AR • 掉渣田-2023/11/14创立<br>电脑版视图<br>真的有人会看这些吗
+    </div>
+    <!--
    <div style="height: 80px;"></div>
 	  <div class="blue2-rectangle"></div>
 	  <div class="gray2-rectangle"></div>
