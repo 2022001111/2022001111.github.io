@@ -481,28 +481,28 @@
                             </tr>
                         </table>
                     </div>
-                    <div class="neirong"><!--宣传视频-->
+                    <div class="neirong" style="width: 75vw;"><!--宣传视频-->
                         <p class="text-with-background" style="font-size:50px;font-family:Minecraft字体">宣传视频</p>
                         <div>
                             <button class="button-style" onclick="showVideo('video1')">如何导入键位</button>
                             <button class="button-style" onclick="showVideo('video2')">FCL宣传片</button>
-                            <button class="button-style" onclick="showVideo('video3')">官方服务器</button>
+                            <!-- <button class="button-style" onclick="showVideo('video3')">官方服务器</button> -->
                         </div>
                         <div id="video1" class="video-tab" style="display:block;">
                             <iframe src="https://player.bilibili.com/player.html?bvid=BV1Vm42157H7&page=1"
                                 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
-                                width="100%" height="720">
+                                width="100%" height="480">
                             </iframe>
                         </div>
                         <div id="video2" class="video-tab" style="display:none;">
                             <iframe src="https://player.bilibili.com/player.html?bvid=BV1wy411i7bz&page=1"
                                 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
-                                width="100%" height="720">
+                                width="100%" height="480">
                             </iframe>
                         </div>
                         <div id="video3" class="video-tab" style="display:none;">
                             <p>FSF服务器<br></p>
-                            <a href="HTTP://add.aternos.org/apxfsf" style="color: black;"></a><button
+                            <a href="HTTP://add.aternos.org/apxfsf" style="color: black;"><button
                                 class="button-style"
                                 style="width: auto;height: auto;color: black;">在MCBE中添加此服务器</button></a>
                             ​<p>添加链接：add.aternos.org/apxfsf</p>
@@ -514,6 +514,32 @@
                         <script>
                             function showVideo(videoId) {
                                 var videos = document.getElementsByClassName('video-tab');
+                                for (var i = 0; i < videos.length; i++) {
+                                    videos[i].style.display = 'none';
+                                }
+                                document.getElementById(videoId).style.display = 'block';
+                            }
+                        </script>
+                    </div>
+                    <div class="neirong" ><!--服务器-->
+                        <p class="text-with-background" style="font-size:50px;font-family:Minecraft字体">官方服务器</p>
+                        <div>
+                            <!-- <button class="button-style" onclick="showfwq('fwq1')">官方服务器</button> -->
+                        </div>
+                        <div id="fwq1" class="fwq-tab" style="display:block;">
+                            <p>FSF服务器<br></p>
+                            <a href="HTTP://add.aternos.org/apxfsf" style="color: black;"><button
+                                class="button-style"
+                                style="width: auto;height: auto;color: black;">在MCBE中添加此服务器</button></a>
+                            ​<p>添加链接：add.aternos.org/apxfsf</p>
+                            <p>​地址：apxfsf.aternos.me</p>
+                            <p> ​端口：27614</p>
+                            <p>​核心：基岩版</p>
+                            <p>版本：1.21.20.03</p>​
+                        </div>
+                        <script>
+                            function showfwq(videoId) {
+                                var videos = document.getElementsByClassName('fwq-tab');
                                 for (var i = 0; i < videos.length; i++) {
                                     videos[i].style.display = 'none';
                                 }
