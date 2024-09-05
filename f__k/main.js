@@ -50,58 +50,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-//滚轮
-const scrollbar = document.getElementById('custom-scrollbar');
-const thumb = document.getElementById('scroll-thumb');
-const content = document.documentElement;
-
-let isDragging = false;
-let initialMouseY = 0;
-let initialScrollTop = 0;
-let scrollbarHeight = scrollbar.clientHeight;
-let contentHeight = content.scrollHeight;
-let contentClientHeight = content.clientHeight;
-
-// 更新滚动条的大小和位置
-function updateThumbPosition() {
-    const thumbHeight = scrollbarHeight * (contentClientHeight / contentHeight);
-    const thumbTop = (content.scrollTop / (contentHeight - contentClientHeight)) * (scrollbarHeight - thumbHeight);
-    thumb.style.height = `${thumbHeight}px`;
-    thumb.style.top = `${thumbTop}px`;
-}
-
-// 滚动条事件
-function handleMouseDown(e) {
-    isDragging = true;
-    initialMouseY = e.clientY;
-    initialScrollTop = content.scrollTop;
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-}
-
-function handleMouseMove(e) {
-    e.preventDefault();
-    const deltaY = e.clientY - initialMouseY;
-    content.scrollTop = initialScrollTop + deltaY;
-    updateThumbPosition();
-}
-
-function handleMouseUp() {
-    isDragging = false;
-    document.removeEventListener('mousemove', handleMouseMove);
-    document.removeEventListener('mouseup', handleMouseUp);
-}
-
-// 监听滚动条拖动
-thumb.addEventListener('mousedown', handleMouseDown);
-// 初始化滚动条位置
-updateThumbPosition();
-
-// 窗口大小变化时更新滚动条
-window.addEventListener('resize', function() {
-    contentHeight = content.scrollHeight;
-    contentClientHeight = content.clientHeight;
-    updateThumbPosition();
+self.addEventListener('fetch', event => {
+    //缓存数据以供离线使用
+    const {request} = event;
+    const url = new URL(request.url);
+    if(url.origin === location.origin) {
+        event.respondWith(cacheData(request));
+    } else {
+        event.respondWith(networkFirst(request));
+    }
 });
+async function cacheData(request) {
+    const cachedResponse = await caches.match(request);
+    return cachedResponse || fetch(request);
+}
