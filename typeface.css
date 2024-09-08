@@ -270,7 +270,7 @@ p {
   position: fixed;
   top: 0;
   left: -270px;
-  transition: left 0.3s;
+  transition: left 0.7s ease; /* 平滑过渡效果 */;
   /* 设置不同的边框颜色和宽度 */
   border-top: 5px solid #414244; /* 上边框 */
   border-right: 5px solid #232325; /* 右边框 */

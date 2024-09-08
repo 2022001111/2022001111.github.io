@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="typeface.css">
     <meta charset="UTF-8">
     <meta name="apeng" content="AR掉渣田官网•AR Team">
+    <link rel="icon" href="images/dztlogo.png" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
     <title>掉渣田•官网（AR Team）</title>
     <style>
@@ -257,36 +258,45 @@
                 behavior: 'smooth' // 'smooth' 表示平滑滚动
             });
         };</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    var menuButton = document.getElementById('menu-button');
+    var sidebar = document.getElementById('sidebar');
+    var mask = document.createElement('div');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var menuButton = document.getElementById('menu-button');
-            var sidebar = document.getElementById('sidebar');
-            var mask = document.createElement('div');
+    // 设置遮罩样式，初始透明
+    mask.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0); z-index: 1000; visibility: hidden; transition: background 0.7s ease;';
 
-            // 设置遮罩样式
-            mask.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1000; display: none;';
+    menuButton.addEventListener('click', function () {
+        sidebar.style.left = sidebar.style.left === '0px' ? '-260px' : '0px';
+        if (sidebar.style.left === '0px') {
+            document.body.appendChild(mask); // 显示遮罩
+            mask.style.visibility = 'visible';
+            mask.style.background = 'rgba(0, 0, 0, 0.5)'; // 渐变到半透明
+        } else {
+            mask.style.background = 'rgba(0, 0, 0, 0)'; // 渐变到透明
+            setTimeout(function() {
+                mask.style.visibility = 'hidden'; // 隐藏遮罩
+                document.body.removeChild(mask); // 移除遮罩
+            }, 700); // 等待过渡效果完成后再移除遮罩
+        }
+    });
 
-            menuButton.addEventListener('click', function () {
-                sidebar.style.left = sidebar.style.left === '0px' ? '-260px' : '0px';
-                if (sidebar.style.left === '0px') {
-                    document.body.appendChild(mask); // 显示遮罩
-                    mask.style.display = 'block';
-                } else {
-                    document.body.removeChild(mask); // 隐藏遮罩
-                }
-            });
+    // 点击侧滑栏以外的区域也可以关闭侧滑栏和遮罩
+    document.addEventListener('click', function (event) {
+        if (!sidebar.contains(event.target) && event.target !== menuButton) {
+            sidebar.style.left = '-260px';
+            mask.style.background = 'rgba(0, 0, 0, 0)'; // 渐变到透明
+            setTimeout(function() {
+                mask.style.visibility = 'hidden'; // 隐藏遮罩
+                document.body.removeChild(mask); // 移除遮罩
+            }, 700); // 等待过渡效果完成后再移除遮罩
+        }
+    });
+});
 
-            // 点击侧滑栏以外的区域也可以关闭侧滑栏和遮罩
-            document.addEventListener('click', function (event) {
-                if (!sidebar.contains(event.target) && event.target !== menuButton) {
-                    sidebar.style.left = '-260px';
-                    document.body.removeChild(mask);
-                }
-            });
-        });
+</script>
 
-    </script>
 
 
 
@@ -781,7 +791,8 @@
 	  -->
     </p>
     <p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> </p>
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    </p>
     <!--
 <iframe src="https://player.bilibili.com/player.html?bvid=BV1QE421c7a4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="200" height="200"> </iframe>
 -->
