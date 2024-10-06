@@ -125,7 +125,7 @@ button:active {
     right: 10px;
     background-color: #313234;
     width: 70px;
-    height: 300px;
+    height: 340px;
     display: none;
     border-top: 2px solid #414244; /* 上边框 */
   border-right: 2px solid #232325; /* 右边框 */
@@ -177,6 +177,22 @@ button:active {
   padding-bottom: 8px;
   z-index: 114514;
 }
+
+#scoreInfo {
+  color: #FFF; /* 设置“Score:”文本的颜色 */
+}
+
+#scoreInfo #finalScore {
+  color: #FCE655; /* 设置“【分数】”文本的颜色 */
+}
+
+.customButton {
+  position: relative; /* 使按钮相对其最近的定位祖先定位 */
+  left: 5px;         /* 距离左边100px */
+  /* 其他样式，如宽度、高度和背景色等 */
+  width: 230px;
+  height: 50px;
+}
 </style>
 </head>
 <body>
@@ -195,6 +211,7 @@ button:active {
   <button id="cheatButton" onclick="toggleCheatMenu()">≡</button>
   <div id="cheatMenu">
     <button onclick="increaseSpeed()" style="transform: scale(0.7); transform-origin: center center;">更快</button><br><br>
+    <button onclick="reduceSpeed()" style="transform: scale(0.7); transform-origin: center center;">更慢</button><br><br>
     <button onclick="decreaseLength()" style="transform: scale(0.7); transform-origin: center center;">更短</button><br><br>
     <button onclick="increaseLength()" style="transform: scale(0.7); transform-origin: center center;">更长</button><br><br>
     <button onclick="addScore()" style="transform: scale(0.7); transform-origin: center center;">+10分</button><br><br>
@@ -204,6 +221,19 @@ button:active {
   </div>
   <div id="message"></div>
 </div>
+
+<div id="deathScreen" 
+style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 0, 0, 0.4); z-index: 100;">
+<div style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <p style="font-family:Minecraft字体;font-size:40px;color:white">你死了！</p>
+    <p id="scoreInfo" style="font-family:Minecraft字体;font-size:18px;">分数：<span id="finalScore">0</span></p><br>
+    <button class="customButton" onclick="startGame()" id="playAgainButton" >重生</button>
+    <br><br><br>
+    <a href="https://armt.072211.xyz/"><button class="customButton">返回</button></a>
+  </div>
+</div>
+
+
 <script>
 const clickSound = new Audio('click.mp3');
 const canvas = document.getElementById('gameCanvas');
@@ -308,11 +338,19 @@ function move() {
     case 'LEFT': head.x -= box; break;
     case 'RIGHT': head.x += box; break;
   }
+  
+function gameOver() {
+  clearInterval(gameInterval);
+  document.getElementById('deathScreen').style.display = 'block';
+  document.getElementById('finalScore').innerText = score;
+}
+
+
   // 检查贪吃蛇是否撞到自己或墙壁
   if (head.x < 0 || head.y < 0 || head.x >= canvasSize * box || head.y >= canvasSize * box || isCollision(head, snake)) {
     dieSound.play();
     clearInterval(gameInterval);
-    alert(`游戏结束。你的分数：${score}`);
+    gameOver(`游戏结束。你的分数：${score}`);
     return;
   }
   // 检查贪吃蛇是否吃到食物
@@ -334,8 +372,10 @@ function startGame() {
   placeFood();
   draw();
   gameInterval = setInterval(move, 200); // 调整速度
+  
+  // 确保死亡界面隐藏
+  document.getElementById('deathScreen').style.display = 'none';
 }
-
 // 根据按钮点击移动贪吃蛇
 function moveSnake(direction) {
   if (direction === "UP" && d !== "DOWN") d = "UP";
@@ -357,6 +397,12 @@ function increaseSpeed() {
   clickSound.play()
   clearInterval(gameInterval);
   gameInterval = setInterval(move, 100); // 提升游戏速度
+}
+
+function reduceSpeed() {
+  clickSound.play()
+  clearInterval(gameInterval);
+  gameInterval = setInterval(move, 300); // 减慢游戏速度
 }
 
 function decreaseLength() {
