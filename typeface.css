@@ -1,4 +1,4 @@
-		<style type="text/css">
+
 			@font-face {
 				font-family:'MinecraftTen-VGORe';
 				src: url(MinecraftTen-VGORe.ttf);
@@ -17,20 +17,43 @@
 				font-size: 50px;
 				text-shadow: none;
 			}
-		</style>
+/* 字体*/			
+			
+	body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(rgba(49, 50, 52, 0.5), rgba(49, 50, 52, 1.0)), url('images/background.png');
+    background-repeat: repeat-y;
+    background-position: center, center;
+    background-attachment: fixed, fixed;
+    z-index: -4;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    
+}
+
+/* 周年庆样式 */
+
 
   table {
 padding: 0;
 }
-
+/*
 html {
   background-color: #313234;
 }  
+*/
 
 
 p {
     color: white;
 }
+
 
 .text-with-background {
     background-color: #48494B; /* 设置文本的背景颜色 */
@@ -101,7 +124,10 @@ p {
 }
 
 
-
+/* 弹窗图片 */
+.window-img {
+				border: 2px solid #000000;
+}
 /* 定义矩形样式预设组 */
 .style-group {
     /* 第一个矩形样式 */
@@ -264,7 +290,6 @@ p {
 
 
 
-
 /* sidebar */
 
 .sidebar-style {
@@ -315,21 +340,6 @@ p {
 }
   /* 按下按钮的样式 */
 
-#menu-button:active,
-#top-button:active {
-  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
-  background-color: #208305;
-  outline: solid 2px white;/* 外圈白色边框 */
-}
-
-/* 鼠标悬停时的样式 */
-#menu-button:hover,
-#top-button:hover {
-  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
-  background-color: #208305;
-  outline: solid 2px white;/* 外圈白色边框 */
-}
-
 #top-button {
   /* 设置按钮的大小和边框 */
   width: 60px;
@@ -360,5 +370,76 @@ p {
    
 }
 
+#menu-button:active,
+#top-button:active {
+  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
+  background-color: #208305;
+  outline: solid 2px white;/* 外圈白色边框 */
+}
+
+/* 鼠标悬停时的样式 */
+#menu-button:hover,
+#top-button:hover {
+  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
+  background-color: #208305;
+  outline: solid 2px white;/* 外圈白色边框 */
+}
+
+#mbe-button {
+  /* 设置按钮的大小和边框 */
+  width: 60px;
+  height: 60px;
+  border: 2px solid;
+  border-color: #619E50 #1D4D13 #1D4D13 #619E50; /* 上 右 下 左 */
+  border-radius: 0px; /* 可选的圆角效果 */
+
+  /* 设置内部填充颜色 */
+  background-color: #3B8526;
+
+  /* 设置文本样式 */
+  color: #FFF;
+  font-size: 40px;
+  font-family: Minecraft字体;
+  font-weight: 100%;
+  text-align: center;
+  line-height: 40px; /* 使文本垂直居中 */
+
+  /* 鼠标悬停样式 */
+  transition: background-color 0.0s, border-color 0.0s;
+  cursor: pointer;
+  position: fixed; /* 使用fixed定位 */
+  top: 150px;        /* 从顶部偏移10px */
+  right: 10px;      /* 从右侧偏移10px */
+  z-index: 100;     /* 确保按钮在层级上位于顶层 */
+  outline: solid 2px black;/* 外圈黑色边框 */
+   
+}
+
+#mbe-button:active {
+  border-color: #015301 #2BCD1D #2BCD1D #015301; /* 上 右 下 左 */
+  background-color: #1D4D13;
+  outline: solid 2px white;/* 外圈白色边框 */
+}
+
+/* 鼠标悬停时的样式 */
+#mbe-button:hover {
+  border-color: #1A4411 #50913D #50913D #1A4411; /* 上 右 下 左 */
+  background-color: #1D4D13;
+  outline: solid 2px white;/* 外圈白色边框 */
+}
 
 
+/* 底部json ui容器 */
+.under-window {
+    border: 2px solid;
+				border-color: #EFEFEF #707070 #707070 #EFEFEF; 
+				/* 上 右 下 左 */
+    background-color: #C6C6C6;
+    outline: solid 2px black;
+    width: 80%;
+    height: 160px;
+    top: 150px;  
+    right: 10px;      
+    justify-content: center; /* 水平居中 */
+    
+}
